@@ -1,0 +1,66 @@
+/* index.css
+   ------------------------------------------------------------
+   Global, page-wide styles. Anything that should apply to the
+   ENTIRE application (fonts, colors, resets) lives here.
+   App.css (loaded later) holds styles for specific components,
+   which keeps global rules and component rules easy to tell apart.
+------------------------------------------------------------- */
+
+:root {
+  /* Design tokens: naming colors here means every component can
+     reuse the exact same palette instead of typing raw hex codes
+     everywhere. Change a value here and it updates the whole site. */
+  --color-navy: #1b2a4a;
+  --color-navy-light: #24365e;
+  --color-gold: #e8a33d;
+  --color-gold-dark: #c8852a;
+  --color-bg: #f7f7f5;
+  --color-surface: #ffffff;
+  --color-text: #2a2f3a;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --radius-card: 14px;
+  --shadow-card: 0 2px 10px rgba(27, 42, 74, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* System font stack: this avoids depending on Google Fonts (or any
+     other internet resource) just to render text, so the project
+     looks the same and loads instantly with or without internet. */
+  font-family: "Segoe UI", "Helvetica Neue", Arial, -apple-system,
+    BlinkMacSystemFont, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Georgia", "Segoe UI", serif;
+  color: var(--color-navy);
+  line-height: 1.25;
+  margin: 0 0 0.5em 0;
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
